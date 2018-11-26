@@ -35,6 +35,8 @@ class NewsDelegate extends Ui.BehaviorDelegate {
 	    index++;
 	    if(index==noheadlines) { 
 		    index=0;
+		    Attention.vibrate([new Attention.VibeProfile(100,200)]);
+
 	    }
 	}
     }
@@ -82,6 +84,7 @@ class NewsDelegate extends Ui.BehaviorDelegate {
 			    }
 		       }
 		    }
+		     Attention.vibrate([new Attention.VibeProfile(100,500)]);
 		    nextStory();
 		} else {
 			notify.invoke("Bad response");
